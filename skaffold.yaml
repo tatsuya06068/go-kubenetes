@@ -1,0 +1,12 @@
+apiVersion: skaffold/v4beta2
+kind: Config
+metadata:
+  name: go-kubenetes
+build:
+  artifacts:
+  - image: sample-app
+    docker:
+      dockerfile: Dockerfile
+manifests:
+  rawYaml:
+  - app.yaml
